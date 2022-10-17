@@ -1,0 +1,12 @@
+﻿https://csharpindepth.com/articles/singleton
+
+- Singleton is just a single class with a private instance and a public static method that provides the only way to reference that instance.
+- It must have a private constructor. (It may have other properties and methods ,too, but they are not necessary to implement the pattern.)
+- The nature of singleton pattern is that classes that implement it have at any time in the life of an application, either 0 or 1 instance.
+- Singleton Classes are created without parameters.
+- If you need a variety of similar instances based on different parameters, the factory design patterns are what you need.
+- Singleton instances are typically not created until something requests them. This is known as lazy instantiation and is the default behavior assumed by most implementations of this pattern.
+- It is also possible to create the instance you need when the applications starts and then use that instance for the life of the app.
+- Singleton classes should have a single, private, parameterless constructor. Thus, subclassing isn't allowed. To further enforce this intent, and to help optimize the JIT compiler , should be marked as sealed.
+- The only reference to the singleton should be in a private static field in the singleton class itself.
+- The rest of the application references the instance of the class through a public static method the class exposes for this purpose.
